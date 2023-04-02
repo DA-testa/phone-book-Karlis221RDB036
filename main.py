@@ -16,7 +16,8 @@ def write_responses(result):
 
 def process_queries(queries):
     result = []
-    # Keep list of all existing (i.e. not deleted yet) contacts.
+    # Keep list of all existing (i.e. not deleted yet) contacts
+    # Use a dictionary to save time (key is the number)
     contact_dict = {}
     for cur_query in queries:
         if cur_query.type == 'add':
